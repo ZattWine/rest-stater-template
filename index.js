@@ -4,6 +4,10 @@ import morgan from 'morgan'
 
 import { notFound, errorHandler } from './middleware/error.js'
 import userRoutes from './routes/userRoutes.js'
+import connectDatabase from './config/db.js'
+
+// database connect
+connectDatabase()
 
 const app = express()
 
