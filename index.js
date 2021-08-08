@@ -3,8 +3,9 @@ import express from 'express'
 import morgan from 'morgan'
 
 import { notFound, errorHandler } from './middleware/error.js'
-import userRoutes from './routes/userRoutes.js'
 import connectDatabase from './config/db.js'
+import userRoutes from './routes/userRoutes.js'
+import adminRoutes from './routes/adminRoutes.js'
 
 // database connect
 connectDatabase()
@@ -21,6 +22,7 @@ app.use(express.json())
 
 /** routes */
 app.use('/api/users', userRoutes)
+app.use('/api/admin', adminRoutes)
 
 /** status - whether the APIs is running or not */
 app.get('/', (req, res) => {
