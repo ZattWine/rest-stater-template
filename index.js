@@ -3,6 +3,7 @@ import express from 'express'
 import morgan from 'morgan'
 
 import { notFound, errorHandler } from './middleware/error.js'
+import userRoutes from './routes/userRoutes.js'
 
 const app = express()
 
@@ -13,6 +14,9 @@ if (process.env.NODE_ENV === 'development') {
 
 /** applying necessary middlewares */
 app.use(express.json())
+
+/** routes */
+app.use('/api/users', userRoutes)
 
 /** status - whether the APIs is running or not */
 app.get('/', (req, res) => {
