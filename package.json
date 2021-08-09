@@ -1,5 +1,5 @@
 {
-  "name": "social-media-api",
+  "name": "starter-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,13 +8,9 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "data:import": "node seeder",
-    "data:destroy": "node seeder -d",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "data:destroy": "node seeder -d"
   },
-  "keywords": [
-    "social",
-    "media"
-  ],
+  "keywords": [],
   "author": "Kyaw Zayar Tun",
   "license": "ISC",
   "devDependencies": {
@@ -26,7 +22,6 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.29.1",
     "mongoose": "^5.13.5",
     "morgan": "^1.10.0"
   }
